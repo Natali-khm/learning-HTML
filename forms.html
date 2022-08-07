@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Tiro+Devanagari+Sanskrit:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        max-width: 600px;
+        padding: 0 30px;
+        font-family: "Montserrat", sans-serif;
+        background-color: rgb(246, 243, 243);
+      }
+      fieldset {
+        border-color: rgb(136, 181, 218);
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      legend {
+        color: rgb(34, 34, 236);
+      }
+      label {
+        display: inline-block;
+        width: 110px;
+        vertical-align: top;
+        margin: 6px;
+        font-size: 0.8em;
+      }
+      input {
+        width: 250px;
+        margin: 10px 0; 
+      }
+
+      input:focus, textarea:focus, select:focus{
+        background-color: rgb(229, 231, 248);
+        outline: none;
+      }
+
+      select {
+        width: 258px;
+        height: 21px;
+        margin: 10px 0;
+      }
+
+      textarea {
+        width: 252px;
+        margin: 10px 0;
+      }
+
+      input, textarea, select {
+        border-style: none;
+      }
+
+      .gender-block{
+        padding: 5px 0 5px 0px;
+      }
+
+      .gender-block input{
+        width: auto;
+        margin-top: 5px;
+      }
+
+      .gender-block #male{
+        margin-left: 125px;
+      }
+
+      .skills input{
+        width: auto;
+        margin-top: 7px;
+      }
+
+      #html{
+       margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" mathod="post">
+      <fieldset>
+        <legend>Контактная информация</legend>
+        <label for="name">Имя<em>*</em></em></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Иван Иванов"
+          required
+        /><br />
+
+        <label for="telephone">Телефон</label>
+        <input type="tel" id="telephone" placeholder="+375 (хх) ххх-хх-хх" /></br>
+
+        <label for="email">Email<em>*</em></label>
+        <input type="email" id="email" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Персональная информация</legend>
+        <label for="age">Возраст, лет</label>
+        <input type="text" id="age"><br>
+
+        <label for="residence">Место проживания</label>
+        <select id="residence">
+          <option value="earth">Планета Земля</option>
+          <option value="moon">Луна</option>
+        </select><br>
+
+        <div class="gender-block">
+        <label>Ваш пол</label>
+
+        <input type= "radio" id="female" name="gender" value="female">          
+        <label for="female">Женщина</label><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Мужчина</label>
+        </div>
+
+        <label for="comments">Личные качества</label>
+        <textarea id="comments" cols="30" rows="6"></textarea>
+      </fieldset>
+
+      <fieldset class="skills">
+        <legend>Навыки</legend>
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="html">Html</label>
+
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="skills" value="js">
+        <label for="js">JS</label>
+
+      </fieldset>  
+        <button type="submit">Отправить</button>
+
+    </form>     
+
+  </body>
+</html>
