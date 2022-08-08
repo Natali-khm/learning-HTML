@@ -13,7 +13,7 @@
         max-width: 600px;
         padding: 0 30px;
         font-family: "Montserrat", sans-serif;
-        background-color: rgb(246, 243, 243);
+        background-color: rgb(228, 222, 222);
       }
       fieldset {
         border-color: rgb(136, 181, 218);
@@ -33,6 +33,10 @@
       input {
         width: 250px;
         margin: 10px 0; 
+      }
+
+      em{
+        color: red;
       }
 
       input:focus, textarea:focus, select:focus{
@@ -76,6 +80,10 @@
       #html{
        margin-left: 40px;
       }
+
+      input:required:invalid {
+        border: 1px solid red;
+      }
     </style>
   </head>
   <body>
@@ -83,12 +91,7 @@
       <fieldset>
         <legend>Контактная информация</legend>
         <label for="name">Имя<em>*</em></em></label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Иван Иванов"
-          required
-        /><br />
+        <input type="text" id="name" placeholder="Иван Иванов" required/><br />
 
         <label for="telephone">Телефон</label>
         <input type="tel" id="telephone" placeholder="+375 (хх) ххх-хх-хх" /></br>
@@ -99,8 +102,8 @@
 
       <fieldset>
         <legend>Персональная информация</legend>
-        <label for="age">Возраст, лет</label>
-        <input type="text" id="age"><br>
+        <label for="age">Возраст, лет<em>*</em></label>
+        <input type="text" id="age" required><br>
 
         <label for="residence">Место проживания</label>
         <select id="residence">
@@ -119,7 +122,7 @@
         </div>
 
         <label for="comments">Личные качества</label>
-        <textarea id="comments" cols="30" rows="6"></textarea>
+        <textarea id="comments" cols="30" rows="6">Не скромничайте..</textarea>
       </fieldset>
 
       <fieldset class="skills">
@@ -134,7 +137,9 @@
         <label for="js">JS</label>
 
       </fieldset>  
-        <button type="submit">Отправить</button>
+      <p><em>*</em> - поля, обязательные для заполнения</p>
+      <button type="submit">Отправить</button>
+        
 
     </form>     
 
